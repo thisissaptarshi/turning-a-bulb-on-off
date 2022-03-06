@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb</title>
+</head>
+<style>
+    .container{
+        text-align: center;
+        background-color: lightseagreen;
+        height: 350px; 
+        width: 600px;
+        /* margin-top:150px; */
+        margin-left: 110px;
+        border-radius: 20px;
+        box-shadow: 5px 5px black;
+    }
+    .container h3{
+        font-size: 30px;
+        padding-top: 20px;
+    }
+    #on{
+        background-color: yellow;
+        color: black;
+        width: 100px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 10px;
+    }
+    #on:hover{
+        background-color: white;
+        color: black;
+        width: 100px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 10px;
+        /* margin-top: 200px; */
+    }
+    #off{
+        background-color: yellow;
+        color: black;
+        width: 100px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 10px;
+        /* margin-top: 200px; */
+    }
+    #off:hover{
+        background-color: white;
+        color: black;
+        width: 100px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 10px;
+        /* margin-top: 200px; */
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <h3>Light turn ON/OFF</h3>
+        <button id="on">Turn on the lights</button>
+        <img src="bulb_off.png" id="bulb" height="200" width="200">
+        <button id="off">Turn off the lights</button>
+    </div>
+
+
+    <script>
+        const on = document.getElementById("on");
+        const off = document.getElementById("off");
+        const bulb = document.getElementById("bulb");
+
+        on.addEventListener('click',function(){
+            bulb.src = "bulb_on.jpg";
+        })
+
+        off.addEventListener('click',function(){
+            bulb.src = "bulb_off.png";
+        })
+
+    </script>
+</body>
+</html>
